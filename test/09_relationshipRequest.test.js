@@ -11,6 +11,11 @@ let user;
 let nutricionist;
 let relationshipRequest;
 
+beforeAll(async () => {
+  await usersModel.deleteMany({});}
+  await relationshipRequestModel.deleteMany({});
+});
+
 test("[200] Se creo la solicitud de relacion correctamente", async () => {
   const response = await request(app).post("/api/auth/register").send({
     firstName: "Usuario",

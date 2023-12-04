@@ -98,12 +98,12 @@ const sendRelationshipRequestEmail = async (req) => {
     const subject = userNameUser + " solicito que seas su nutricionista!";
 
     const message = `
-            <p>¡Hola ${userNameNutritionist}!</p>
-            <p>Recibes este correo porque ${userNameUser} te ha solicitado que seas su nutricionista.</p>
+            <p>¡Hola <strong>${userNameNutritionist}</strong>!</p>
+            <p>Recibes este correo porque <strong>${userNameUser}</strong> te ha solicitado que seas su nutricionista.</p>
             <p>Podras aceptar/rechazar la solitud desde la App o ingresando a traves del siguiente link:</p>
             <a href="${url}">${url}</a>
-            <p>Saludos!/p>
-            <p>Equipo Heliapp/p>
+            <p>Saludos!</p>
+            <p>Equipo Heliapp</p>
             `;
 
     await sendEmail(subject, message, send_to, sent_from, reply_to);

@@ -12,7 +12,7 @@ let nutricionist;
 let relationshipRequest;
 
 beforeAll(async () => {
-  await usersModel.deleteMany({});}
+  await usersModel.deleteMany({});
   await relationshipRequestModel.deleteMany({});
 });
 
